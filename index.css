@@ -1,0 +1,166 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Manrope",
+    sans-serif;
+  background-color: hsl(210, 46%, 95%);
+
+}
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card{
+  display: flex;
+  max-width: 730px;
+  overflow: hidden;
+  box-shadow:  0 20px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.card-image{
+  flex: 1;
+}
+.card-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 100%;
+}
+.card-content{
+  flex: 1.2;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding:  2rem;
+  justify-content: space-between;
+}
+.card-title{
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+.card-description{
+  color: hsl(214, 17%, 51%);
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+.card-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.author{
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+.author img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.author-name{
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.publish-date{
+  color: hsl(212, 23%, 69%);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.share-icon{
+  background-color: hsl(210, 46%, 95%);
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tooltip{
+  background-color: hsl(217, 19%, 35%);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  bottom: 227px;
+  left: 67%;
+  border-radius: 10px;
+  z-index: 10;
+  color: white;
+  display: none;
+}
+.tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+}
+.tooltip span {
+  letter-spacing: 5px;
+  font-size: 0.7rem;
+  color: hsl(210, 46%, 95%);
+  text-transform: uppercase;
+}
+
+
+@media (max-width:768px){
+  .card{
+    flex-direction: column;
+    max-width: 90%;
+    border-radius: 10px;
+  }
+  .card-image{
+    width: 100%;
+    height: auto;
+  }
+  .card-image img{
+    width: 100%;
+    height: auto;
+  }
+  .card-content{
+    padding: 1.8rem;
+  }
+  .card-title{
+    font-size: 1.1rem;
+  }
+  .card-description{
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  .author-name{
+    font-size: 0.7rem;
+  }
+  .publish-date{
+    font-size: 0.7rem;
+  }
+  .share-icon{
+    padding: 0.4rem;
+  }
+  .author{
+    gap: 0.8rem;
+  }
+  .author img{
+    width: 35px;
+    height: 35px;
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
+  
